@@ -131,10 +131,6 @@ ol {
   outline: 1px solid #ffffff;
 }
 
-.search-form__textfield:has(:focus-visible) {
-  outline: 4px solid #9f1010;
-}
-
 .search-form__textfield {
   all: unset;
   min-width: 225px;
@@ -142,6 +138,7 @@ ol {
   border-bottom: 1px solid rgb(255, 255, 255);
   padding-top: 2.5px;
   padding-bottom: 2.5px;
+  margin-top: 5px;
   appearance: none;
  }
 
@@ -169,7 +166,11 @@ ol {
   opacity: 1;
  }
 
-.search-form__fieldset:hover:has(.search-form__checkbox-list) {
+ .search-form__pseudo-checkbox:hover ~ .search-form__label-text {
+  text-decoration: solid underline rgb(255, 255, 255) 1px;
+ }
+
+.search-form__label-text:hover {
   text-decoration: solid underline rgb(255, 255, 255) 1px;
 }
 
@@ -207,10 +208,7 @@ ol {
   cursor: pointer;
 }
 
-.content__card-link:active {
-  background-color: #545050;
-}
-
+.content__card-link:active,
 .content__card-link_current {
   background-color: #545050;
 }
@@ -257,6 +255,16 @@ ol {
   display: flex;
   justify-content: space-between;
   align-items: start;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.content__video-card:hover {
+  text-decoration: underline;
+}
+
+.content__video-card:focus-visible {
+  outline: 1px solid #ffffff;
 }
 
 .content__video-card-description-container {
